@@ -1,5 +1,7 @@
 // import { useState } from "react";
 
+import { Form } from "react-router-dom";
+
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
@@ -35,7 +37,7 @@ function CreateOrder() {
   const cart = fakeCart;
 
   return (
-    <div>
+    <Form method="POST" action="">
       <h2>Ready to order? Let's go!</h2>
 
       <form>
@@ -73,8 +75,12 @@ function CreateOrder() {
           <button>Order now</button>
         </div>
       </form>
-    </div>
+    </Form>
   );
 }
-
+export async function action({ request }) {
+  const formData = await request.formData();
+  console.log(formData);
+  return null;
+}
 export default CreateOrder;

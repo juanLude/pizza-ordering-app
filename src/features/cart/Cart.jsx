@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LinkButton from "../../ui/LinkButton";
 
 const fakeCart = [
   {
@@ -25,16 +26,12 @@ const fakeCart = [
 ];
 
 function Cart() {
+  // eslint-disable-next-line no-unused-vars
   const cart = fakeCart;
 
   return (
     <div>
-      <Link
-        to="/menu"
-        className="text-sm text-blue-500 hover:text-blue-600 hover:underline"
-      >
-        &larr; Back to menu
-      </Link>
+      <LinkButton to="/menu">&larr; Back to menu</LinkButton>
 
       <h2>Your cart, %NAME%</h2>
 

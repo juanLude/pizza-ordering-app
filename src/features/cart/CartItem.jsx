@@ -3,7 +3,6 @@ import { formatCurrency } from "../../utils/helpers";
 import DeleteItem from "./DeleteItem";
 import { getCurrentQuantityById } from "./cartSlice";
 import UpdateItemQuantity from "./UpdateItemQuantity";
-import { current } from "@reduxjs/toolkit";
 
 // eslint-disable-next-line react/prop-types
 function CartItem({ item }) {
